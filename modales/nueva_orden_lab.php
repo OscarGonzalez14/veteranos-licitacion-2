@@ -17,8 +17,13 @@
              
              <div class="row">
                <div class="col-sm-5">
-                 <label for="" class="etiqueta">Paciente</label>
+               <label for="" class="etiqueta">Paciente</label>
+               <div class="input-group">
                 <input type="text" class="form-control clear_orden_i oblig" id="paciente">
+                <div class="input-group-append" onClick="buscarCitado()">
+                  <span class="input-group-text bg-success"><i class="fas fa-search"> </i></span>
+                </div>
+                </div>
                </div>
                <div class="col-sm-3">
                  <label for="" class="etiqueta">DUI</label>

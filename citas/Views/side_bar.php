@@ -17,7 +17,7 @@
             </a>
             <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="orden.php" class="nav-link">
+              <a href="../vistas/orden.php" class="nav-link">
                 <i class="far fa-circle nav-icon text-info"></i>
                   <p>Ordenes</p>
                 </a>

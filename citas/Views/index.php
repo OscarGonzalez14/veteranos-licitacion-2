@@ -21,7 +21,7 @@ require_once("../vistas/links_plugin.php");
 <!-- top-bar -->
   <?php require_once('../vistas/top_menu.php')?>
   <!-- Main Sidebar Container -->
-  <?php require_once('../vistas/side_bar.php')?>
+  <?php require_once('side_bar.php')?>
     <div class="container">
         <div id="calendar"></div>
     </div>

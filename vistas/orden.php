@@ -17,6 +17,7 @@ $categoria_usuario = $_SESSION["categoria"];
  require_once('../modales/aros_en_orden.php');
  require_once('../modales/modal_rectificaciones.php');
  require_once('../modales/estadisticas.php');
+ require_once('../modales/modal_citas.php');
 
  ?>
 <style>
@@ -120,6 +121,7 @@ require_once("links_js.php");
 <script type="text/javascript" src="../js/ordenes.js"></script>
 <script type="text/javascript" src="../js/productos.js"></script>
 <script type="text/javascript" src="../js/cleave.js"></script>
+<script type="text/javascript" src="../js/citados.js"></script>
 <script>
   var dui = new Cleave('#dui_pac', {
   delimiter: '-',
