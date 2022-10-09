@@ -45,7 +45,7 @@ $categoria_usuario = $_SESSION["categoria"];
       </div>
       <button class="btn btn-outline-primary btn-sm btn-flat" data-toggle="modal" data-target="#nueva_orden_lab" onClick='get_numero_orden();' id="order_new"><i class="fa fa-glasses" style="margin-top: 2px"> Crear Orden</i></button>
       <div class="row">
-         <div class="col-sm-3"></div>
+         <div class="col-sm-2"></div>
          <div class="col-sm-2" style="text-align: right;display: flex;align-items: right">
            <input type="date" class="form-control clear_orden_i" id="desde_orders" placeholder="desde">
          </div>
@@ -58,8 +58,11 @@ $categoria_usuario = $_SESSION["categoria"];
         <div class="col-sm-3">
           <button class="btn btn-info btn-sm" data-toggle="modal" data-target="#modal_estadisticas" onClick>
             <i class="fas fa-chart-pie"></i> Estadisticas</button>
+          <button class="btn btn-info btn-sm" data-toggle="modal" data-target="" onClick='getPacientesCitados()'>
+            <i class="fas fa-file-pdf"></i> Citas</button>
           </div>
        </div>
+
       <div class="card card-dark card-outline" style="margin: 2px;">
        <table width="100%" class="table-hover table-bordered" id="datatable_ordenes"  data-order='[[ 0, "desc" ]]'>    
          <thead class="style_th bg-dark" style="color: white">

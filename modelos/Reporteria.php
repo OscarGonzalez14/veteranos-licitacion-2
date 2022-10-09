@@ -44,6 +44,16 @@ $conectar= parent::conexion();
 
 }
 
+//obterner citas segun día seleccionado
+public function get_pacientes_citados($fecha){
+  $conectar= parent::conexion();
+  parent::set_names();
+  $sql = "select*from citas where fecha = '2022-09-30' order by id_cita;";
+  $sql=$conectar->prepare($sql);
+  $sql->bindValue(1,$fecha);
+  $sql->execute();
+  return $resultado= $sql->fetchAll(PDO::FETCH_ASSOC);
+}
 
 }///FIN DE LA CLASE
 

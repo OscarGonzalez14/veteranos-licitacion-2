@@ -105,3 +105,15 @@
     </script>
   </body>
 </html>
+
+
+<script>
+  var form = document.CreateElement("form");
+  form.target = "print_blank";
+  form.method = "POST";
+  form.action = "orden.php";
+  var input = document.createElementO("input");
+  input.type = "text";
+  input.name = "laboratorio";
+  input.value = 
+</script>

@@ -1697,6 +1697,25 @@ function init(){
  
  }
  
+ ///Obtener las citas de los pacientes
+
+ function getPacientesCitados(){
+  let fecha = document.getElementById('desde_orders').value;
+  let form = document.createElement("form");
+  form.target = "print_blank";
+  form.method = "POST";
+  form.action = "imprimir_citas_pdf.php";
+  let input = document.createElement("input");
+  input.type = "hidden";
+  input.name = "fecha-cita";
+  input.value = fecha;
+  form.appendChild(input);
+
+
+  document.body.appendChild(form);//"width=600,height=500"
+  form.submit();
+  document.body.removeChild(form);
+ }
  
  init();
  

@@ -8,7 +8,7 @@ class Conectar {
  	protected $dbh;
  	protected function conexion(){
  	try {
-	    $conectar = $this->dbh = new PDO("mysql:local=localhost;dbname=veteranos","root","");
+	    $conectar = $this->dbh = new PDO("mysql:local=localhost;dbname=veteranos","jackeline","jack93");
 		return $conectar;
     }catch (Exception $e) {
  			print "¡Error!: " . $e->getMessage() . "<br/>";
