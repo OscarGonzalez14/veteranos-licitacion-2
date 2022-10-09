@@ -9,6 +9,7 @@ $citas = new Citados();
 switch ($_GET["op"]){
 
     case 'listar_pacientes_citados':
+
         $citados = $citas->listar_pacientes_citados();
         $data = Array();
         foreach($citados as $c){
@@ -16,7 +17,7 @@ switch ($_GET["op"]){
             $sub_array[] = $c["dui"]; 
             $sub_array[] = $c["paciente"]; 
             $sub_array[] = $c["sector"];
-            $sub_array[] = "<i class='fas fa-plus-circle fa-2x' onClick='selectCitado(".$c["id_cita"].")'></i>"; 
+            $sub_array[] = "<i class='fas fa-plus-circle fa-2x' onClick='getCitados(".$c["id_cita"].")'></i>"; 
             $data[] = $sub_array;
         }
 
@@ -29,7 +30,23 @@ switch ($_GET["op"]){
 
         break;
     
-{
+    case 'get_data_cita':
 
-}
+        $data = $citas->getDataCitaId($_POST["id_cita"]);
+        foreach ($data as $row) {
+            $output["paciente"] = $row["paciente"];
+            $output["dui"] = $row["dui"];
+            $output["edad"] = $row["edad"]; 
+            $output["telefono"] = $row["telefono"];
+            $output["usuario_lente"] = $row["usuario_lente"];
+            $output["ocupacion"] = $row["ocupacion"];
+            $output["sector"] = $row["sector"];
+            $output["genero"] = $row["genero"];
+            $output["depto"] = $row["depto"];
+            $output["municipio"] = $row["municipio"];  
+        }
+        echo json_encode($output);
+
+        break;
+
 }

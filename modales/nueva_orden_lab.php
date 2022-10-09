@@ -5,7 +5,7 @@
   }
 </style>
       <div class="modal fade" id="nueva_orden_lab" style="" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-        <div class="modal-dialog modal-xl" style="max-width: 95%">
+        <div class="modal-dialog modal-xl modal-dialog-scrollable" style="max-width: 95%">
           <div class="modal-content">
             <div class="modal-header bg-dark">
               <h4 class="modal-title" style="font-size: 15px">ORDEN&nbsp;&nbsp;<span id="correlativo_op"></span></h4>
@@ -19,7 +19,7 @@
                <div class="col-sm-5">
                <label for="" class="etiqueta">Paciente</label>
                <div class="input-group">
-                <input type="text" class="form-control clear_orden_i oblig" id="paciente">
+                <input type="text" class="form-control clear_orden_i oblig" id="paciente" readonly>
                 <div class="input-group-append" onClick="buscarCitado()">
                   <span class="input-group-text bg-success"><i class="fas fa-search"> </i></span>
                 </div>
@@ -27,22 +27,22 @@
                </div>
                <div class="col-sm-3">
                  <label for="" class="etiqueta">DUI</label>
-                <input type="text" class="form-control clear_orden_i oblig" id="dui_pac">
+                <input type="text" class="form-control clear_orden_i oblig" id="dui_pac" readonly>
                </div>
 
               <div class="col-sm-2">
                  <label for="" class="etiqueta">Edad</label>
-                <input type="search" class="form-control clear_orden_i oblig" id="edad_pac">
+                <input type="search" class="form-control clear_orden_i oblig" id="edad_pac" readonly>
                </div>
 
               <div class="col-sm-2">
                  <label for="" class="etiqueta">Telef.</label>
-                 <input type="text" class="form-control clear_orden_i oblig" id="telef_pac">
+                 <input type="text" class="form-control clear_orden_i oblig" id="telef_pac" readonly>
               </div>
 
               <div class="col-sm-3">
                  <label for="" class="etiqueta">Usuario lente</label>
-                  <select class="form-control oblig" id="usuario_pac">
+                  <select class="form-control oblig" id="usuario_pac" readonly>
                     <option value="">Seleccionar ...</option>
                     <option value="No">No</option>
                     <option value="Si">Si</option>
@@ -51,7 +51,7 @@
 
                 <div class="col-sm-2">
                  <label for="" class="etiqueta">Genero</label>
-                 <select class="form-control oblig" id="genero_pac">
+                 <select class="form-control oblig" id="genero_pac" readonly>
                   <option value="">Seleccionar ...</option>
                   <option value="M">Masculino</option>
                   <option value="F">Femenino</option>
@@ -60,51 +60,22 @@
 
               <div class="col-sm-5">
                  <label for="" class="etiqueta">Ocupación</label>
-                <input type="text" class="form-control clear_orden_i oblig" id="ocupacion_pac">
+                <input type="text" class="form-control clear_orden_i oblig" id="ocupacion_pac" readonly>
                </div>
 
                <div class="col-sm-2">
-                 <label for="" class="etiqueta">Institución</label>
-                 <select class="form-control" id="instit">
-                  <option value="INABVE" selected="selected">INABVE</option>
-                  <option value="FOPROLYD">FOPROLYD</option>
-                </select>
+                 <label for="" class="etiqueta">Sector</label>
+                 <input type="text" class="form-control clear_orden_i oblig" id="instit" readonly>
                </div>
 
-              <div class="col-sm-3">
-                 <label for="" class="etiqueta">Fecha exp.</label>
-                <input type="date" class="form-control clear_orden_i oblig" id="fecha_creacion">
+              <div class="col-sm-5">
+                 <label for="" class="etiqueta">Departamento</label>
+                <input type="text" class="form-control clear_orden_i oblig" id="departamento_pac" readonly>
               </div>
-
-              <div class=" form-group col-sm-4 select2-purple">
-              <label for="" class="etiqueta">Departamento </label> <span id="departamento_pac_data" style="color: red"></span>
-              <select class="select2 form-control clear_input" id="departamento_pac" multiple="multiple" data-placeholder="Seleccionar Departamento" data-dropdown-css-class="select2-purple" style="width: 100%;height: ">              
-                <option value="0">Seleccione Depto.</option>
-                <option value="San Salvador">San Salvador</option>
-                <option value="La Libertad">La Libertad</option>
-                <option value="Santa Ana">Santa Ana</option>
-                <option value="San Miguel">San Miguel</option>
-                <option value="Sonsonate">Sonsonate</option>
-                <option value="Usulutan">Usulután</option>
-                <option value="Ahuachapan">Ahuachapán</option>
-                <option value="La Union">La Unión</option>
-                <option value="La Paz">La Paz</option>
-                <option value="Chalatenango">Chalatenango</option>
-                <option value="Morazan">Morazán</option>
-                <option value="Cuscatlan">Cuscatlán</option>
-                <option value="San Vicente">San Vicente</option>
-                <option value="Cabanas">Cabañas</option>
-
-              </select>               
-            </div>
-
-
-            <div class=" form-group col-sm-5 select2-purple">
-              <label for="" class="etiqueta">Departamento </label> <span id="munic_pac_data" style="color: red"></span>
-              <select class="select2 form-control clear_input" id="munic_pac" multiple="multiple" data-placeholder="Seleccionar Municipio" data-dropdown-css-class="select2-purple" style="width: 100%;height: ">
-                <option value="0">Seleccione Depto.</option>
-              </select>               
-            </div>
+              <div class="col-sm-7">
+                 <label for="" class="etiqueta">Municipio</label>
+                <input type="text" class="form-control clear_orden_i oblig" id="munic_pac_data" readonly>
+              </div>
 
              </div>
             <div class="eight"style="align-items: center">

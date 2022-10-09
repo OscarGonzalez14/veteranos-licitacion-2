@@ -25,6 +25,8 @@ require_once("../vistas/links_plugin.php");
     <div class="container">
         <div id="calendar"></div>
     </div>
+
+ 
     <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="Label" aria-hidden="true">
         <div class="modal-dialog" style="max-width:80%">
             <div class="modal-content">

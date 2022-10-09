@@ -176,10 +176,8 @@ function init(){
    let avfinal_oi= $("#avfinal_oi").val();
    let telefono = $("#telef_pac").val();
    let user = $("#user_act").val();
-   let depto_pac = $("#departamento_pac").val();
-   let municipio_pac = $("#munic_pac").val();
-   let depto = depto_pac.toString();
-   let municipio = municipio_pac.toString();
+   let depto =  $("#departamento_pac").val();
+   let municipio = $("#munic_pac_data").val();
    let instit = $("#instit").val();
    let campos_orden = document.getElementsByClassName('oblig');
    if (modelo_aro_orden == "") {
@@ -350,8 +348,8 @@ function init(){
         $("#avfinal_oi").val(data.avfinal_oi);
         $("#telef_pac").val(data.telefono);
         $("#genero_pac").val(data.genero);
-        $("#departamento_pac_data").html(data.depto);
-        $("#munic_pac_data").html(data.municipio);
+        $("#departamento_pac").val(data.depto);
+        $("#munic_pac_data").val(data.municipio);
         $("#instit").val(data.institucion);
         let tipo_lente = data.tipo_lente;
         const acentos = {'á':'a','é':'e','í':'i','ó':'o','ú':'u','Á':'A','É':'E','Í':'I','Ó':'O','Ú':'U'};

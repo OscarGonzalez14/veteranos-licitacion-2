@@ -1,5 +1,5 @@
 <div class="modal" id="modal_citados" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"> 
-  <div class="modal-dialog" style="max-width: 70%">
+  <div class="modal-dialog" style="max-width: 55%">
     <div class="modal-content">
 
       <!-- Modal Header -->

@@ -56,3 +56,27 @@ function dtTemplateCitas(table,route,...Args){
 
      
 }
+
+function getCitados(id_cita){
+
+    $.ajax({
+        url:"../ajax/citados.php?op=get_data_cita",
+        method:"POST",
+        cache:false,
+        data :{id_cita:id_cita},
+        dataType:"json",
+        success:function(data){
+            document.getElementById("paciente").value=data.paciente;
+            document.getElementById("dui_pac").value=data.dui;
+            document.getElementById("edad_pac").value=data.edad;
+            document.getElementById("telef_pac").value=data.telefono;
+            document.getElementById("usuario_pac").value=data.usuario_lente;
+            document.getElementById("ocupacion_pac").value=data.ocupacion;
+            document.getElementById("instit").value=data.sector;
+            document.getElementById("genero_pac").value=data.genero;
+            document.getElementById("departamento_pac").value=data.depto;
+            document.getElementById("munic_pac_data").value=data.municipio;
+            $("#modal_citados").modal('hide');
+        }
+        });      
+}

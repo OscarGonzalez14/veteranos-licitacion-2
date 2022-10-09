@@ -62,11 +62,12 @@ require_once("../config/conexion.php");
     barcode('../codigos/' . $codigo . '.png', $codigo, 50, 'horizontal', 'code128', true);
   }
   /////////////   REGISTRAR ORDEN ///////////////////////////////
-  public function registrar_orden($correlativo_op,$paciente,$fecha_creacion,$od_pupilar,$oipupilar,$odlente,$oilente,$marca_aro_orden,$modelo_aro_orden,$horizontal_aro_orden,$vertical_aro_orden,$puente_aro_orden,$id_usuario,$observaciones_orden,$dui,$od_esferas,$od_cilindros,$od_eje,$od_adicion,$oi_esferas,$oi_cilindros,$oi_eje,$oi_adicion,$tipo_lente,$color_varilla,$color_frente,$imagen,$edad,$usuario,$ocupacion,$avsc,$avfinal,$avsc_oi,$avfinal_oi,$telefono,$genero,$user,$depto,$municipio,$instit){
+  public function registrar_orden($correlativo_op,$paciente,$od_pupilar,$oipupilar,$odlente,$oilente,$marca_aro_orden,$modelo_aro_orden,$horizontal_aro_orden,$vertical_aro_orden,$puente_aro_orden,$id_usuario,$observaciones_orden,$dui,$od_esferas,$od_cilindros,$od_eje,$od_adicion,$oi_esferas,$oi_cilindros,$oi_eje,$oi_adicion,$tipo_lente,$color_varilla,$color_frente,$imagen,$edad,$usuario,$ocupacion,$avsc,$avfinal,$avsc_oi,$avfinal_oi,$telefono,$genero,$user,$depto,$municipio,$instit){
 
     $conectar = parent::conexion();
     date_default_timezone_set('America/El_Salvador'); 
     $hoy = date("d-m-Y H:i:s");
+    $fecha_creacion = date("Y-m-d");
     $estado = 0;
     $categoria_lente = "-";
     $laboratorio = "";
